@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora</title>
+  </head>
+
+  <body>
+    <p>Primer valor: </p>
+    <input type="number" id="1st">
+    <p>Segundo valor: </p>
+    <input type="number" id="2nd">
+    <p>Elije operación a realizar:</p>
+    <select id="oper">
+      <option value=1>Suma</option>
+      <option value=2>Resta</option>
+      <option value=3>División</option>
+      <option value=4>Multiplicación</option>
+    </select>
+
+    <button onclick="console.log(mathems())">Calcular :)</button>
+    <p id="result"></p>
+
+    <script type="text/javascript">
+      const mathems = () =>{
+        val1=document.getElementById('1st').value;
+        val2=document.getElementById('2nd').value;
+        operat=document.getElementById('oper').value;
+
+        switch(operat){
+          case '1':
+            var res=parseInt(val1)+parseInt(val2);
+            break;
+          case '2':
+            var res=  parseInt(val1)-parseInt(val2);
+            break;
+          case '3':
+            var res=parseInt(val1)/parseInt(val2);
+            break;
+          case '4':
+            var res=parseInt(val1)*parseInt(val2);
+            break;
+        }
+
+        document.getElementById("result").innerHTML = res;
+        return res;
+      }
+    </script>
+
+  </body>
+</html>
