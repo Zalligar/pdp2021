@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="getUsers">Obtener usuarios </button>
+
+        <ul>
+            <li v-for="user in users" :key="user.id">
+                Nombre de usuario {{user.id}}:
+                {{user.username}}
+                <br>
+                Nombre de Compañía:
+                {{user.company.name}}
+                <br>
+                <br>
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="scr18.js"></script>
+</body>
+</html>
