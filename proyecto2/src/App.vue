@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Registro de libros</h1>
     <form @submit.prevent="estatusEditar ? actualizar() : crearLibro()">
       <p>
         <input type="text" v-model="titulo" placeholder="Título">
@@ -11,14 +12,13 @@
 
     <br>
     <img src="https://cdn2.scratch.mit.edu/get_image/gallery/289341_170x100.png" v-if="cargando">
+    <br>
 
     <table>
       <thead>
         <tr>
           <th>Título</th>
           <th>Autor</th>
-          <th></th>
-          <th></th>
         </tr>
       </thead>
       <tr v-for="libro in libros" :key="libro.titulo">
@@ -108,6 +108,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 10px;
+}
+body{background-color: #19b698}
+th{color: #000000}
+table{
+  width: 95%;
+  class: center;
 }
 </style>
